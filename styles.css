@@ -1,0 +1,66 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .wrapper {
+    display: flex;
+    height: 100vh;
+
+  }
+  
+  .containerone {
+    width: 30vw;
+    height: 100%;
+    background-image: url(ibrahim-shabil-vouy8AF8JuM-unsplash\ \(1\).jpg);
+    background-size: cover;
+} 
+
+.logo {
+    height: 57%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logodiv {
+    height: 25%;
+    width: 100%;
+    background-color: rgba(3, 3, 24, 0.6); 
+}
+.containertwo {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(234, 252, 255);
+    height: 100%;
+    width: 70%;
+}
+
+.header {
+    height: 35%;
+}
+.formcontainer {
+    height: 35%; 
+    background-color: white;
+    box-shadow:2px 5px 10px rgba(75, 75, 75, 0.327);
+}
