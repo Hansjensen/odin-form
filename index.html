@@ -6,6 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Odin Form</title>
+    <script>
+          
+        // Function to check Whether both passwords
+        // is same or not.
+        function checkPassword(form) {
+            password1 = form.password.value;
+            password2 = form.repassword.value;
+
+            // If password not entered
+            if (password1 == '')
+                alert ("Please enter Password");
+                  
+            // If confirm password not entered
+            else if (password2 == '')
+                alert ("Please enter confirm password");
+                  
+            // If Not same return False.    
+            else if (password1 != password2) {
+                alert ("\nPassword did not match: Please try again...")
+                return false;
+            }
+
+            // If same return True.
+            else{
+                alert("Password Match: Welcome to GeeksforGeeks!")
+                return true;
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -25,8 +54,27 @@
                 <p class="headertext">This is not a real service. This is make believe made on soup night. Soup night always gets me fiesty and now you can too. Sign up <em>now</em> to join in.<br><br>You <em>know</em> you want to.</em></p>
 
             </div>
-            <div class="formcontainer"></div>
-            <div class="submitcontainer"></div>
+            <form onSubmit = "return checkPassword(this)">
+            <div class="formcontainer">
+                <p class="formtext">Let's do this!</p>
+                <div class="innerform">
+                    <div class="form1">
+                    <label for="first_name">First Name</label><input name="first_name" id="first_name" type="text" required>
+                    <label for="email">Email</label><input type="email" name="email" id="email" required>
+                    <label for="password">Password</label><input type="password" name="password" id="password" required>
+                     </div>
+                     <div class="form2">
+                        <label for="last_name">Last Name</label><input name="last_name" id="last_name" type="text" required>
+                        <label for="phone">Phone</label><input type="tel" name="phone" id="phone" required>
+                        <label for="repassword">Re Enter Password</label><input type="password" name="repassword" id="repassword" required>
+                     </div>
+                </div>   
+            </div>
+            <div class="submitcontainer">
+                <input type="submit" id="btn" value="Create Account">
+                <p class="login">Already have an account? <a href="login">Log In</a></p>
+            </div>
+            </form>
         </div>
     </div>
 
